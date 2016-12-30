@@ -4,7 +4,7 @@ struct node{
 	node *lchild;
 	node *rchild;//指针域	 
 };
-int n;
+int n;//节点个数 
 node* newnode(int x){
 	node* Node = new node;//or node* Node = (node *)malloc(sizeof(node))
 	Node->data = x;
@@ -42,12 +42,12 @@ void search(node* root, int x){
 }
 int main(void){
 	node* root = NULL;
- 	scanf("%d", &n);
+ 	scanf("%d", &n);//输入节点个数 
  	int data[n];
  	for(int i = 0; i < n; i++){
- 		scanf("%d", &data[i]);
+ 		scanf("%d", &data[i]);//输入节点值 
 	 }
-	for(int i = 0; i < n; i++){
+	for(int i = 0; i < n; i++){  //进行创造节点操作 
 		insert(root, data[i]);
 	} 
 	for(int i = 0; i < n; i += 2){
